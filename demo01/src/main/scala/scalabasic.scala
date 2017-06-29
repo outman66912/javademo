@@ -1,3 +1,5 @@
+import scala.collection.mutable.ArrayBuffer
+
 /**
  * Created by cjiang059 on 6/27/2017.
  */
@@ -6,21 +8,39 @@ object scalabasic {
   val add=(x:Int)=>x+100
 
   def main(args: Array[String]) {
-//    doWhile
-    println(addA(2))
-    println(add(2))
-    study
+
+    var b=ArrayBuffer[Int]()
+    b+=1
+    b+=(2,3,4)
+    b++=Array(5,6,7)
+    b.trimEnd(2)
+    b.insert(1,8,9)
+    b.remove(5)//b.remove(3,1) 位置,个数
+    val a=b.toArray
+    for(o<-a){
+      println(o)
+    }
+
+    //    doWhile
+//    println(addA(2))
+//    println(add(2))
+//    study(1,2,3,4,5)
   }
 
   def doWhile(): Unit ={
     var line=""
     do{
-        line=readLine()
+//        line=readLine()
         println("pp===:"+line)
     }while(line!="")
   }
 
-  def study(): Unit ={
+  def study(args:Int*): Unit ={
+    var result=0;
+    for(arg<-args){
+      result+=arg
+    }
+    println("pp="+result)
     for(i<- 1 to 5){
       try{
         var n=if(i%2 == 0)i/2 else throw new RuntimeException("n must be event")
@@ -45,6 +65,7 @@ object scalabasic {
     }
 
     for(i<-1 to 2;j<-1 to 2 if i!=j) println(i+j)
+
   }
 
 

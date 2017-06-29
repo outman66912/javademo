@@ -8,6 +8,11 @@
         </element>
         <element id="directory" name="lib">
           <element id="library" level="project" name="Maven: log4j:log4j:1.2.12" />
+          <element id="library" level="project" name="Maven: org.scala-lang:scala-library:2.11.7" />
+          <element id="library" level="project" name="Maven: org.scala-lang:scala-compiler:2.11.7" />
+          <element id="library" level="project" name="Maven: org.scala-lang.modules:scala-xml_2.11:1.0.4" />
+          <element id="library" level="project" name="Maven: org.scala-lang.modules:scala-parser-combinators_2.11:1.0.4" />
+          <element id="library" level="project" name="Maven: org.scala-lang:scala-reflect:2.11.7" />
           <element id="library" level="project" name="Maven: org.scala-tools:maven-scala-plugin:2.15.2" />
           <element id="library" level="project" name="Maven: org.apache.maven:maven-plugin-api:2.2.1" />
           <element id="library" level="project" name="Maven: org.apache.maven:maven-project:2.2.1" />
@@ -64,7 +69,7 @@
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="E:\javademo\demo01\target/MANIFEST.MF" />
+        <element id="file-copy" path="C:\Users\cjiang059\Downloads\javademo\demo01\target/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="demo01/web/Web" />
     </root>
