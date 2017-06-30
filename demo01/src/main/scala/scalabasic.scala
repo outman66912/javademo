@@ -16,10 +16,36 @@ object scalabasic {
     b.trimEnd(2)
     b.insert(1,8,9)
     b.remove(5)//b.remove(3,1) 位置,个数
-    val a=b.toArray
-    for(o<-a){
-      println(o)
+    var a=b.toArray
+    var result=for(o<-a) yield o*2
+    for(o<-a) print(o+" ")
+    println()
+    var c=result.filter(_%2==0).map(2*_)
+    for(o<-result) print(o+" ")
+    println()
+    for(o<-c) print(o+" ")
+    println()
+    println(a.sum)
+    println(a.max)
+    a=a.sorted
+//    scala.util.Sorting.quickSort(a)
+    for(o<-a) print(o+" ")
+    println()
+    var s1=a.mkString(",")
+    println(s1)
+    var s2=a.mkString("<",",",">")
+    println(s2)
+    //多维数组
+    var mat=Array.ofDim[Int](2,2)
+    println()
+    mat(1)(1)=100
+    for(o<-mat){
+      for(i<-o)
+        print(i+" ")
+    println()
     }
+
+//    println(result)
 
     //    doWhile
 //    println(addA(2))
