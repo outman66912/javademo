@@ -3,11 +3,19 @@ import scala.collection.mutable.ArrayBuffer
 /**
  * Created by cjiang059 on 6/27/2017.
  */
+class student{
+  var age=0//默认为private
+  private var s=0
+  private[this] var y=0
+  def comm(oo:student) ={this.s>oo.s;//报错this.y>oo.y}
+}
 object scalabasic {
   def addA(x:Int)=x+100
   val add=(x:Int)=>x+100
 
   def main(args: Array[String]) {
+    val ss1=new student
+    println(ss1.age)
 
     var b=ArrayBuffer[Int]()
     b+=1
@@ -44,6 +52,8 @@ object scalabasic {
         print(i+" ")
     println()
     }
+    val map=Map("book"->20,"gi"->10,"gun"->33)
+    for((k,v)<-map)yield (k,v*2)
 
 //    println(result)
 
