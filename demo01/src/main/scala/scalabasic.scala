@@ -3,13 +3,33 @@ import scala.collection.mutable.ArrayBuffer
 /**
  * Created by cjiang059 on 6/27/2017.
  */
-class student{
-  var age=0//默认为private
-  private var s=0
-  private[this] var y=0
-  def comm(oo:student) ={this.s>oo.s;//报错this.y>oo.y}
+class student private{
+  var age = 0
+  //默认为private
+  var name: String = _
+  private var s = 0
+  private[this] var y = 0
+
+  def this(name: String) {
+    //构造器
+    this() //必须
+    this.name = name
+  }
+
+  def comm(oo: student) = {
+    this.s > oo.s; //报错this.y>oo.y}
+  }
+}
+class student2(var name:String,var  age:Int){
+  def pp={println(this.name)}
+
 }
 object scalabasic {
+  //var temp1= new student  student 加了private后不能调用默认构造方法
+  var t1=new student("dd")
+  println(t1.name)
+
+
   def addA(x:Int)=x+100
   val add=(x:Int)=>x+100
 
