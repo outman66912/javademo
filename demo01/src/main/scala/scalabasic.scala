@@ -3,10 +3,10 @@ import scala.collection.mutable.ArrayBuffer
 /**
  * Created by cjiang059 on 6/27/2017.
  */
-class student private{
+class student{
   var age = 0
   //默认为private
-  var name: String = _
+  var name: String = _//必须赋值，不然就是抽象字段
   private var s = 0
   private[this] var y = 0
 
